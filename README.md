@@ -12,3 +12,4 @@ These are much better than mine - come back when you've fagocitated them:
 * GCP awesome cheat-sheet in colorful PDF format: https://cloud.google.com/sdk/docs/images/gcloud-cheat-sheet.pdf
 * kubectl cheasheet: https://kubernetes.io/docs/reference/kubectl/cheatsheet/ (which actually inspired me for this repo)
 * `gcloud` cheatsheet: https://cloud.google.com/sdk/docs/cheatsheet
+* Google Cloud colorful keywords: https://github.com/gregsramblings/google-cloud-4-words
