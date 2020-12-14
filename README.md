@@ -7,5 +7,8 @@ Anything GCP related pertains here. Feel free to drop me a PR to add stuff. And 
 
 ## Additional resources
 
+These are much better than mine - come back when you've fagocitated them:
+
 * GCP awesome cheat-sheet in colorful PDF format: https://cloud.google.com/sdk/docs/images/gcloud-cheat-sheet.pdf
 * kubectl cheasheet: https://kubernetes.io/docs/reference/kubectl/cheatsheet/ (which actually inspired me for this repo)
+* `gcloud` cheatsheet: https://cloud.google.com/sdk/docs/cheatsheet
