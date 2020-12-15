@@ -7,7 +7,13 @@ gcloud cheatsheet is here: https://cloud.google.com/sdk/docs/cheatsheet
     gcloud auth configure-docker              # makes docker work
     gcloud container clusters get-credentials # Update kubeconfig to get kubectl to use a GKE cluster.
 
+## config
+
+    gcloud config list --format 'value(core.account)' # returns current user
+    gcloud config list --format 'value(core.project)' # returns current project_id
+
 ## Cool examples
+
 Some examples if you're too lazy to click:
 
 For Compute Engine instances with prefix us and not machine type f1-micro:
