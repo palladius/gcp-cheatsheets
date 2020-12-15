@@ -4,9 +4,8 @@ Compute is a BIG world, it encompasses many topics and we might have to break th
 
 For now, enjoy these topics by alpha order:
 
-nets
-FW ruels
-
+* networks
+* FW ruels
 * VMs
 
 
@@ -72,17 +71,15 @@ Note many of these values are NOT needed, but it's good in case you want to edit
 
 Create a VM in THREE networks (need 3 CPU, hence probably a n1-standard4  for it):
 
-# NON VA!!
+### List
 
-	 gcloud beta compute instances create vm-appliance \
-	   --zone=us-central1-c --machine-type=n1-standard-4 \
-	   --subnet=privatesubnet-us \
-	    --boot-disk-device-name=vm-appliance \
-		 --labels=env=stikazzi 
+For Compute Engine instances with prefix us and not machine type f1-micro:
 
-Note that such a mahcine has access to all private IP addresses within the neighbouring subnet but not to the other subnets in pother regions. To do so, you need to enable Policy Routing: https://cloud.google.com/vpc/docs/create-use-multiple-interfaces#configuring_policy_routing
+    gcloud compute instances list --filter="zone ~ ^us AND -machineType:f1-micro"
 
-### Listing
+For a list of ten Compute Engine instances with a label my-label (of any value):
+
+    gcloud compute instances list --filter="labels.my-label:*" --limit=10
 
 Shows your project VMs:
 
