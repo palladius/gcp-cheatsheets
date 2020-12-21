@@ -1,11 +1,12 @@
-I knew I'd get your attention ;) 
+This is an amazing API to query multiple projects at once and get all entities.
+It support a project/folder/org as a target (but not an array of those).
 
 Search:
 
-	gcloud asset search-all-resources |egrep ^name:               $ get EVERYTHING and just select resource name.
-    gcloud asset search-all-resources --query labels.env:prod             # Finds all resources of label ENV=PROD
-    gcloud asset search-all-resources --scope organizations/$ORG_ID        # Finds all resources in Org $ORG_ID
-    gcloud asset search-all-resources --query test |egrep ^name:          # All resources which contain "test" in any searchable field (short version)
+	gcloud asset search-all-resources | egrep ^name:                    # get EVERYTHING and just select resource name.
+    gcloud asset search-all-resources --query labels.env:prod           # Finds all resources of label ENV=PROD
+    gcloud asset search-all-resources --scope organizations/$ORG_ID     # Finds all resources in Org $ORG_ID
+    gcloud asset search-all-resources --query test |egrep ^name:        # All resources which contain "test" in any searchable field (short version)
 
 IAM Policy search:
 
@@ -20,7 +21,7 @@ Export to BigQuery and have fun querying it:
 	# current_project:assets2020 must exist; mytest table will be created/overwritten.
 	gcloud beta asset export --organization=911748599584 --bigquery-dataset assets2020 --bigquery-table=mytest --output-bigquery-force  
 	
-	# Same but creates different tables
+	# Same but creates A LOT of different tables
     gcloud beta asset export --organization=911748599584 --bigquery-dataset assets2020 --bigquery-table=separato --per-asset-type --output-bigquery-force 
 	
 	# Useful query to see GCE VMs which are probably NOT GKE (better to use tag than name regex but still...)
@@ -37,7 +38,17 @@ Operations Listing:
 	
 	gcloud asset operations describe organizations/911748599584/operations/ExportAssets/CONTENT_TYPE_UNSPECIFIED/71a7453c661c30f8874414ba337c1328
  	
-Unfoertunately there's no `gcloud asset operations list` yet.
+Unfortunately there's no `gcloud asset operations list` (yet?).
+
+## Notes
+
+    --project and its fallback core/project property play two roles in
+          the invocation. It specifies the project of the resource to operate
+          on. It also specifies the project for API enablement check, quota,
+          and billing. To specify a different project for quota and billing,
+          use --billing-project or billing/quota_project property.
+
+This means that the calling project might be different from the "called" project(s).
 
 ## Resources
 
