@@ -86,3 +86,22 @@ Shows your project VMs:
     gcloud compute instances list --sort-by=ZONE    # shows list by zone
 	gcloud compute instances list --sort-by=NETWORK # shows list by network (but you dont see the network!)
 
+## SSH
+
+SSH-ing is a weird, myserious yet super-secure process. You can ssh via KEY or IAM (forget password!):
+
+   gcloud compute ssh --zone MYZONE VMNAME 
+
+If you like to leverage config, you canr un this awesome command (docs: https://cloud.google.com/sdk/gcloud/reference/compute/config-ssh):
+
+    gcloud compute config-ssh                        # @oneoff
+
+## Quotas
+
+To check your quotas, see this doc: https://cloud.google.com/compute/quotas
+
+
+
+# Documentation
+
+* Quotas: https://cloud.google.com/compute/quotas
