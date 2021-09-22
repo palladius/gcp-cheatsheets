@@ -12,3 +12,6 @@ gcloud cheatsheet is here: https://cloud.google.com/sdk/docs/cheatsheet
     gcloud config list --format 'value(core.account)' # returns current user
     gcloud config list --format 'value(core.project)' # returns current project_id
 
+## Thanks
+
+* jccb@ on Cloud Logging
