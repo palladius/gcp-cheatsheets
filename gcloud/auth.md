@@ -17,3 +17,18 @@ want to use a service account.
 Once I got a mysterious error which asked me to RE-authorize:
 
   gcloud auth login --update-adc
+
+Explaination here:
+
+Credentials saved to file: [~/.config/gcloud/application_default_credentials.json]
+
+These credentials will be used by any library that requests Application Default Credentials (ADC).
+
+Quota project "<project_id>" was added to ADC which can be used by Google client libraries for billing and quota. Note that some services may still bill the project owning the resource.
+Sometimes you need to run: gcloud auth login --update-adc
+
+## docker
+
+Authenticate as docker/GKE:
+
+  gcloud auth configure-docker
