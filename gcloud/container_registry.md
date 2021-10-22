@@ -5,13 +5,14 @@ APIs for your GCR `docker` repos.
 
 Note this is getting obsoleted in favor of `artifact registry`. give it some time..
 
-## Listing
+## Listing repos and versions
 
     # Shows all repos in CURRENT project_id
     gcloud container images  list
+
     # Shows all repos in ANOTHER project_id
     gcloud container images  list --repository gcr.io/another-project-id
 
-
-    # Shows all version for one repo
-    gcloud --project goliardia-prod container images list --repository gcr.io/goliardia-prod/goliardia-it
+    # Shows all version for one repo (note absence of --repo since its a precise argument of LIST-TAGS)
+    gcloud container images list-tags gcr.io/goliardia-prod/goliardia-it
+ 
