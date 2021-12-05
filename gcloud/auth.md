@@ -1,11 +1,5 @@
 
-I always get confused here :)
-So here you go:
-
-
-
-
-
+I always get confused here. So here you go:
 
 ## Authenticating on behalf of your apps
 

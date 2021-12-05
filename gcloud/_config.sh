@@ -15,6 +15,6 @@ Something you call client side and changes the bahaviour of your clients (gcloud
 
 Other options: 
 
-* `core/log_http` so you see whcih API is called, 
+* `core/log_http` so you see which API is called, 
 * `compute/zone` and `compute/region` for automated resource allocation when using gcloud compute (very useful!)
 
