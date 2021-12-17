@@ -8,6 +8,12 @@ Search:
     gcloud asset search-all-resources --scope organizations/$ORG_ID     # Finds all resources in Org $ORG_ID
     gcloud asset search-all-resources --query test |egrep ^name:        # All resources which contain "test" in any searchable field (short version)
 
+Smarter search:
+
+    # Finds all GCS buckets with name matching palladius
+    gcloud asset search-all-resources --query palladius --asset-types storage.googleapis.com/Bucket | grep 'displayName:'
+
+
 IAM Policy search:
 
     gcloud asset analyze-iam-policy --organization=$ORG_ID \
@@ -22,7 +28,7 @@ Export to BigQuery and have fun querying it:
 	gcloud beta asset export --organization=911748599584 --bigquery-dataset assets2020 --bigquery-table=mytest --output-bigquery-force  
 	
 	# Same but creates A LOT of different tables
-    gcloud beta asset export --organization=911748599584 --bigquery-dataset assets2020 --bigquery-table=separato --per-asset-type --output-bigquery-force 
+    gcloud beta asset export --organization=911748599584 --bigquery-dataset assets2020 --bigquery-table=separato --per-asset-type --output-bigsquery-force 
 	
 	# Useful query to see GCE VMs which are probably NOT GKE (better to use tag than name regex but still...)
 	echo ' SELECT * FROM `ric-cccwiki.assets2020.prova` 

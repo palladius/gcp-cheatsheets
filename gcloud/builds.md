@@ -8,3 +8,4 @@ To get a list of your Build Triggers instead you need to use the BETA instead (!
 
     gcloud beta builds triggers list
 
+This is nicely documented in https://cloud.google.com/build/docs/automating-builds/create-manage-triggers
