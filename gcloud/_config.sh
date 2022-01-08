@@ -13,6 +13,14 @@ Something you call client side and changes the bahaviour of your clients (gcloud
 
     gcloud config set core/project MY_PROJECT    # sets project id to default project. You can do the same with zone, ..
 
+## Auth
+
+See auth.md for more info. However for completeness I'll enumerate those commands here too:
+
+    gcloud auth application-default login
+    gcloud auth login --update-adc
+    gcloud auth configure-docker
+
 Other options: 
 
 * `core/log_http` so you see which API is called, 
