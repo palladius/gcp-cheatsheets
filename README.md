@@ -5,6 +5,8 @@ rangind from `gcloud` to its siblings (gsutil, kubectl, ..).
 
 Anything GCP related pertains here. Feel free to drop me a PR to add stuff. And rather than copying from other resources, better to link them.
 
+TODO(ricc): dockerize this to render MD into HTML and have SUPER fast cross link with left/upper navigation. Doing it right now.
+
 ## Naming Conventions
 
 * Filename should follow the name of the command line you're going to use (`kubectl`, `docker` , ...).
@@ -21,3 +23,4 @@ These are much better than mine - come back when you've fagocitated them:
 * `gcloud` cheatsheet: https://cloud.google.com/sdk/docs/cheatsheet
 * Google Cloud colorful keywords: https://github.com/gregsramblings/google-cloud-4-words
 
+  
