@@ -10,3 +10,6 @@
 [submodule "hugo_site/themes/docsy-a-manhouse"]
 	path = hugo_site/themes/docsy-a-manhouse
 	url = https://github.com/google/docsy-example.git
+[submodule "hugo_site/themes/docsy-submodule"]
+	path = hugo_site/themes/docsy-submodule
+	url = https://github.com/google/docsy.git

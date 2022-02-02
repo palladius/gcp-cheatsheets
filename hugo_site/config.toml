@@ -1,7 +1,11 @@
-baseURL = 'http://example.org/'
+baseURL = 'http://gcp-cheatsheet.palladi.us/'
 languageCode = 'en-us'
 title = 'GCP Cheatsheets by Ricc'
-theme = "docsy"
+
+#theme = "docsy"
+#git submodule add https://github.com/google/docsy.git themes/docsy-submodule
+#git submodule update --init --recursive
+#theme = "docsy-submodule"
 #theme = "docsy-example"
-#theme = "ananke"
+theme = "ananke"
 
