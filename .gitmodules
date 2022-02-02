@@ -1,0 +1,12 @@
+[submodule "hugo_site/themes/docsy"]
+	path = hugo_site/themes/docsy
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+[submodule "hugo_site/themes/ananke"]
+	path = hugo_site/themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+[submodule "hugo_site/themese/docsy-a-manhouse"]
+	path = hugo_site/themese/docsy-a-manhouse
+	url = https://github.com/google/docsy-example.git
+[submodule "hugo_site/themes/docsy-a-manhouse"]
+	path = hugo_site/themes/docsy-a-manhouse
+	url = https://github.com/google/docsy-example.git
