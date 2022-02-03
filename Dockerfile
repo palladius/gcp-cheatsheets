@@ -1,20 +1,13 @@
-#FROM node:current-alpine3.14
-FROM ubuntu 
+FROM klakegg/hugo:0.92.1
 
-RUN mkdir /app
-WORKDIR /app
 
-#export DEBIAN_FRONTEND=noninteractive
-ARG DEBIAN_FRONTEND=noninteractive
-# Takes 270sec - do not ALTER BEFORE HERE!!! 
-RUN apt-get update && apt-get dist-upgrade -y && apt-get install -qy nodejs npm
-RUN npm i -g markserv
+COPY hugo_site/ /src 
+#COPY gcloud/ /app/gcloud/ 
 
-COPY *.md /app 
-COPY gcloud/ /app/gcloud/ 
+# todo symlink corretto
+RUN rm /src/content/cheatsheets
+COPY cheatsheets/ /src/content/ 
 
-# Remove ENTRYPOINT, useless!
-#ENTRYPOINT ["/bin/bash" ]
-#ENTRYPOINT ["markserv -p 8080 -a 0.0.0.0" ]
-#CMD ["/bin/ls"]
-CMD ["bash", "-c", "markserv -p 8080 -a 0.0.0.0"]
+
+
+CMD ["bash"]

@@ -6,6 +6,9 @@ draft: false
 
 Welcome to Cheatsheets!
 
+![image alt text](/images/cheatsheet-dark.png)
+
+
 This is:
 
     cheatsheets/index.md
