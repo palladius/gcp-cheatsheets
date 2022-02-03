@@ -8,12 +8,15 @@ menu:
 # mcopied from https://raw.githubusercontent.com/GoogleCloudPlatform/cloud-ops-sandbox/main/website/content/en/docs/_index.md
 ---
 {{< deb >}} _index START {{< /deb >}}
+
 # GCP Cheatsheets (Alpha) 
 
 <!-- 
 From: https://github.com/priyankavergadia/google-cloud-4-words
 -->
 ![image alt text](/images/cheatsheet-dark.png)
+
+{{< tweet user="sreccardo" id="1486213274815418373" >}}
 
 
 This is an open-source website that shows ricc's opinionated sweet commands
