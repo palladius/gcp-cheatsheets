@@ -9,8 +9,8 @@ Other options:
 * `core/log_http` so you see whcih API is called
 * `compute/zone` and `compute/region` for automated resource allocation when using gcloud compute (very useful!)
 
-* get stuff
-*
+* get stuff:
+
     # Note: for "core/SOMETHING", also "SOMETHING" alone seems to work
     $ gcloud config get-value core/project # or 'project'
     my-project
@@ -19,7 +19,7 @@ Other options:
     $ gcloud config get-value core/region
     $ gcloud config get-value core/zone
 
-* Set stuff
+* Set stuff:
 
     gcloud config set core/project MY_PROJECT    # sets project id to default project. You can do the same with zone, ..
 
