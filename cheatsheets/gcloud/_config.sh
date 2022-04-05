@@ -1,5 +1,10 @@
-This is a collection of generic configurations client-side.
-Something you call client side and changes the bahaviour of your clients (gcloud, kubectl , ..)
+For explicit `gcloud config ...` invocations, defer to `gcloud/config.md` file
+in this directory.
+
+This is a meta-page for every other configuration you want to do like SSH,
+Docker, ... This is a collection of generic configurations client-side.
+Something you call client side and changes the bahaviour of your clients
+(gcloud, kubectl , ..)
 
 # ssh
 
@@ -11,8 +16,7 @@ Something you call client side and changes the bahaviour of your clients (gcloud
 
 ## gcloud
 
-<<<<<<< HEAD:cheatsheets/gcloud/_config.sh
-    gcloud config set core/project MY_PROJECT    # sets project id to default project. You can do the same with zone, ..
+As I said, check `gcloud/config.md`.
 
 ## Auth
 
@@ -22,11 +26,9 @@ See auth.md for more info. However for completeness I'll enumerate those command
     gcloud auth login --update-adc
     gcloud auth configure-docker
 
-Other options: 
+Other options:
 
-* `core/log_http` so you see which API is called, 
+* `core/log_http` so you see which API is called,
 * `compute/zone` and `compute/region` for automated resource allocation when using gcloud compute (very useful!)
-=======
-For `gcloud config`, defer to `gcloud.md` file in this directory.
->>>>>>> 5289490 (adding a config specific file for gcloud):gcloud/_config.sh
+
 
