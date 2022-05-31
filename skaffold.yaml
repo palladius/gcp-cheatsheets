@@ -1,0 +1,14 @@
+apiVersion: skaffold/v2beta26
+kind: Config
+metadata:
+  name: gcp-cheatsheets
+deploy:
+  kubectl:
+    manifests:
+    - deploy/k8s*.yaml
+# profiles:
+# - name: prod
+#   patches:
+#   - op: replace
+#     path: /build/artifacts/0/docker/dockerfile
+#     value: DifferentNameForDockerfile

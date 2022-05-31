@@ -1,0 +1,39 @@
+baseURL = 'http://gcp-cheatsheet.palladi.us/'
+languageCode = 'en-us'
+title = 'GCP Cheatsheets by Ricc'
+
+#staticDir = ["content/cheatsheets"]
+
+#theme = "docsy"
+#git submodule add https://github.com/google/docsy.git themes/docsy-submodule
+#git submodule update --init --recursive
+#theme = "docsy-submodule"
+#theme = "docsy-example"
+theme = "ananke"
+
+###################################
+# RICC Copying from CloudOpsSandbox: https://github.com/GoogleCloudPlatform/cloud-ops-sandbox/blob/main/website/config.toml
+###################################
+
+
+# Highlighting config
+pygmentsCodeFences = true
+pygmentsUseClasses = false
+# Use the new Chroma Go highlighter in Hugo.
+pygmentsUseClassic = false
+#pygmentsOptions = "linenos=table"
+# See https://help.farbox.com/pygments.html
+pygmentsStyle = "tango"
+
+[params]
+copyright = "GCP CheatSheet Authors."
+privacy_policy = "https://policies.google.com/privacy"
+[params.links]
+# End user relevant links. These will show up on left side of footer and in the community page if you have one.
+[[params.links.user]]
+# Developer relevant links. These will show up on right side of footer and in the community page if you have one.
+[[params.links.developer]]
+	name = "GitHub"
+	url = "https://github.com/palladius/gcp-cheatsheets"
+	icon = "fab fa-github"
+    desc = "Development takes place here!"
