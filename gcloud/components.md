@@ -11,5 +11,5 @@ My favorite:
     # for K8s development may I suggest to try these ones:
     gcloud components install kubectl minikube
     # also useful: nomos was developed by my friend Ray C. 
-    gcloud components install nomos  kustomize kpt 
+    gcloud components install nomos kustomize kpt 
     
