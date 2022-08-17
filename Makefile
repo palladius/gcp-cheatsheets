@@ -26,4 +26,5 @@ docker-run-bash:
 	docker run -it -p 1313:1313 gcp-cheatsheets-hugo bash
 
 test:
+	rgrep 'TODO(ricc)' cheatsheets/ && exit 1
 	echo TODO to be implemented by Ricc

@@ -13,3 +13,9 @@
 [submodule "hugo_site/themes/docsy-submodule"]
 	path = hugo_site/themes/docsy-submodule
 	url = https://github.com/google/docsy.git
+[submodule "themes/ananke"]
+	path = themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
+[submodule "themes/docsy-a-manhouse"]
+	path = themes/docsy-a-manhouse
+	url = https://github.com/google/docsy-example.git
