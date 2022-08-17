@@ -29,4 +29,5 @@ So let's now capture the parent to see if it's Org or Folder :)
      gcloud projects list --format="table(projectNumber,projectId,createTime.date(tz=LOCAL),parent)"    # This works but parent is scattered and not easy to grep.
 	 gcloud projects list --format="table(projectNumber,projectId,createTime.date(tz=LOCAL),parent.type,parent.id)"   # much better
 
-See also `billing.md` for Adding billing :)
+To list Billing Account associated to a projects, the `gcloud projects` won't help (ATM). But you can list all projects
+linked to a particular BAID; for this, see `billing.md` (TODO(ricc): hugo permalink)

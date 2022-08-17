@@ -12,6 +12,9 @@ If you don't know the BAID by heart:
     000E23-ABCDEF-165177  Billing Account for Foo Bar Baz                            True
     [..]
 
+List projects associated to a BAID:
+
+    $ gcloud beta billing projects list --billing-account 002E2F-ABCDEF-163D05
 
 ## Docs
 
