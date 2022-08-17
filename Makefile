@@ -17,9 +17,13 @@ up:
 	docker-compose up
 
 docker-build:
+	which docker
 	docker build -t gcp-cheatsheets-hugo .
 
 docker-run:
 	docker run -it -p 1313:1313 gcp-cheatsheets-hugo server
 docker-run-bash:
 	docker run -it -p 1313:1313 gcp-cheatsheets-hugo bash
+
+test:
+	echo TODO to be implemented by Ricc
