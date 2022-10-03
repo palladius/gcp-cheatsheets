@@ -11,4 +11,6 @@ Welcome to Cheatsheets!
 
 This is:
 
-    cheatsheets/index.md
+    `cheatsheets/index.md`
+
+Note that Google has a proper [cheatsheet page](https://cloud.google.com/sdk/docs/cheatsheet) for `gcloud`.
