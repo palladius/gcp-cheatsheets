@@ -1,16 +1,8 @@
+#apiVersion: skaffold/v3
 apiVersion: skaffold/v2beta29
 kind: Config
 metadata:
   name: gcp-cheatsheets
-# build:
-#   artifacts:
-#   - image:  skaffold-hugo
-#     docker:
-#       dockerfile: Dockerfile
-# deploy:
-#   kubectl:
-#     manifests:
-#     - deploy/k8s/prod/*.yaml
 
 # profiles: 1 config for prod, 1 for dev
 # modules: if multiple yamls
@@ -23,9 +15,14 @@ profiles:
       - image: skaffold-hugo
         docker:
           dockerfile: Dockerfile # .dev
+        sync:
+         infer:
+         - cheatsheets/**
+         - hugo_site/**
     deploy:
       kubeContext: gke_ror-goldie_europe-west1-d_dev-zonal-normal # ENV[GKE_PROD]
       kubectl:
+        #defaultNamespace: hugo-gcp-cheatsheets
         manifests:
         - deploy/k8s/dev/*.yaml
   - name: prod
@@ -37,10 +34,11 @@ profiles:
         docker:
           dockerfile: Dockerfile # .dev
     deploy:
-        kubeContext: gke_ror-goldie_us-central1_prod
-        kubectl:
-          manifests:
-          - deploy/k8s/prod/*.yaml
+      kubeContext: gke_ror-goldie_us-central1_prod
+      kubectl:
+        defaultNamespace: hugo-gcp-cheatsheets
+        manifests:
+        - deploy/k8s/prod/*.yaml
 
 # not sure what does this: whats more concerning, even Alex doesnt know.
 portForward:

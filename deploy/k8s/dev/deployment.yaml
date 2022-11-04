@@ -1,8 +1,8 @@
 apiVersion: v1
 kind: Service
-namespace: hugo
 metadata:
   name: hugo-gcp-cheatsheets-dev
+  namespace: hugo
   labels:
     app: hugo-gcp-cheatsheets-dev
 spec:
@@ -17,8 +17,8 @@ spec:
 ---
 apiVersion: apps/v1
 kind: Deployment
-namespace: hugo
 metadata:
+  namespace: hugo
   name: hugo-gcp-cheatsheets-dev
   labels:
     app: hugo-gcp-cheatsheets-dev
