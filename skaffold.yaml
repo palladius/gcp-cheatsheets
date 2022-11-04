@@ -1,14 +1,49 @@
-apiVersion: skaffold/v2beta26
+apiVersion: skaffold/v2beta29
 kind: Config
 metadata:
   name: gcp-cheatsheets
-deploy:
-  kubectl:
-    manifests:
-    - deploy/k8s*.yaml
-# profiles:
-# - name: prod
-#   patches:
-#   - op: replace
-#     path: /build/artifacts/0/docker/dockerfile
-#     value: DifferentNameForDockerfile
+# build:
+#   artifacts:
+#   - image:  skaffold-hugo
+#     docker:
+#       dockerfile: Dockerfile
+# deploy:
+#   kubectl:
+#     manifests:
+#     - deploy/k8s/prod/*.yaml
+
+# profiles: 1 config for prod, 1 for dev
+# modules: if multiple yamls
+profiles:
+  - name: dev
+    activation: # should be default when invoked
+      - command: dev
+    build:
+      artifacts:
+      - image: skaffold-hugo
+        docker:
+          dockerfile: Dockerfile # .dev
+    deploy:
+      kubeContext: gke_ror-goldie_europe-west1-d_dev-zonal-normal # ENV[GKE_PROD]
+      kubectl:
+        manifests:
+        - deploy/k8s/dev/*.yaml
+  - name: prod
+    #activation: # should be default when invoked
+      #- command: dev
+    build:
+      artifacts:
+      - image: skaffold-hugo
+        docker:
+          dockerfile: Dockerfile # .dev
+    deploy:
+        kubeContext: gke_ror-goldie_us-central1_prod
+        kubectl:
+          manifests:
+          - deploy/k8s/prod/*.yaml
+
+# not sure what does this: whats more concerning, even Alex doesnt know.
+portForward:
+- resourceType: service
+  resourceName: hugo-gcp-cheatsheets # dockerfile-image
+  port: 8080

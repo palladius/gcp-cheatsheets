@@ -28,3 +28,9 @@ docker-run-bash:
 test:
 	rgrep 'TODO(ricc)' cheatsheets/ && exit 1
 	echo TODO to be implemented by Ricc
+
+
+skaffold-dev-dev:
+	skaffold dev -p dev
+skaffold-dev-prod:
+	skaffold dev -p prod
