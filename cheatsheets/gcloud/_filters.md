@@ -2,9 +2,11 @@ This is a meta-module to help you filtering your gcloud.
 
 This page attempts to answer the question: how do I do
 
+```sql
     SELECT field1, field2, ..   # formats
       FROM ArtifactRepositories
      WHERE type = 'DOCKER'      # filters
+```
 
 ## On Filtering and Formatting
 
