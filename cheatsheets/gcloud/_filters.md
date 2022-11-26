@@ -18,7 +18,7 @@ Some generic documentation is here:
 
 More specific examples are under:
 
-* TODO(ricc): link `projects.md`
-* TODO(ricc): link `compute.md`
-* TODO(ricc): link `deploy.md`
+* [link](https://github.com/palladius/gcp-cheatsheets/blob/main/cheatsheets/gcloud/projects.md) `projects.md`
+* [link](https://github.com/palladius/gcp-cheatsheets/blob/main/cheatsheets/gcloud/compute.md) `compute.md`
+* [link](https://github.com/palladius/gcp-cheatsheets/blob/main/cheatsheets/gcloud/deploy.md) `deploy.md`
 
