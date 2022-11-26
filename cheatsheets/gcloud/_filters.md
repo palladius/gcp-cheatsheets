@@ -18,7 +18,7 @@ Some generic documentation is here:
 
 More specific examples are under:
 
-* [Projects](https://github.com/palladius/gcp-cheatsheets/blob/main/cheatsheets/gcloud/projects.md) `projects.md`
-* [GCE](https://github.com/palladius/gcp-cheatsheets/blob/main/cheatsheets/gcloud/compute.md) `compute.md`
-* [Cloud Deploy](https://github.com/palladius/gcp-cheatsheets/blob/main/cheatsheets/gcloud/deploy.md) `deploy.md`
+*  `projects.md` ([Projects](https://github.com/palladius/gcp-cheatsheets/blob/main/cheatsheets/gcloud/projects.md))
+*  `compute.md` ([GCE](https://github.com/palladius/gcp-cheatsheets/blob/main/cheatsheets/gcloud/compute.md))
+*  `deploy.md` ([Cloud Deploy](https://github.com/palladius/gcp-cheatsheets/blob/main/cheatsheets/gcloud/deploy.md))
 
