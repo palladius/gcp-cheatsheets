@@ -26,8 +26,26 @@ To get a list of fields, IO like to first get a JSON file to see the rich schema
 
 So let's now capture the parent to see if it's Org or Folder :)
 
-     gcloud projects list --format="table(projectNumber,projectId,createTime.date(tz=LOCAL),parent)"    # This works but parent is scattered and not easy to grep.
-	 gcloud projects list --format="table(projectNumber,projectId,createTime.date(tz=LOCAL),parent.type,parent.id)"   # much better
-
+```bash
+# This works but parent is scattered and not easy to grep.
+gcloud projects list --format="table(projectNumber,projectId,createTime.date(tz=LOCAL),parent)"
+# much better
+gcloud projects list --format="table(projectNumber,projectId,createTime.date(tz=LOCAL),parent.type,parent.id)"
+```
 To list Billing Account associated to a projects, the `gcloud projects` won't help (ATM). But you can list all projects
 linked to a particular BAID; for this, see `billing.md` (TODO(ricc): hugo permalink)
+
+## Projects to be cancelled
+
+This highlights all projects about to be deleted:
+
+    gcloud projects list --filter='lifecycleState:DELETE_REQUESTED' # or `ACTIVE`
+
+And this shows first N highlighting a lot of interesting stuff:
+
+```bash
+gcloud projects list \
+  --format="table(createTime.date(tz=LOCAL),projectNumber,projectId,parent.type,parent.id,lifecycleState,name)" \
+  --limit 50
+
+```
