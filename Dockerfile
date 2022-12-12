@@ -1,3 +1,4 @@
+# Note: Hugo is in GOLANG., not Rubu 🤮
 FROM klakegg/hugo:0.92.1
 
 #PORT 8080

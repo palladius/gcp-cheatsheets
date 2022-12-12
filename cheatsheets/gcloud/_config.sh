@@ -20,7 +20,7 @@ As I said, check `gcloud/config.md`.
 
 ## Auth
 
-See auth.md for more info. However for completeness I'll enumerate those commands here too:
+See auth.md for more info. However for completeness Ill enumerate those commands here too:
 
     gcloud auth application-default login
     gcloud auth login --update-adc
