@@ -28,6 +28,12 @@ gcloud beta billing accounts list --format 'csv[no-heading](name)' | while read 
 done  | tee tmp.projects-and-BAIDs.behemoth.txt
 ```
 
+Aneddotically I have 16k projects which is why PMs decided probably to forbid this:
+
+```bash
+$ wc -l tmp.projects-and-BAIDs.behemoth.txt
+16660 tmp.projects-and-BAIDs.behemoth.txt
+```
 
 ## Docs
 
