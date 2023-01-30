@@ -9,6 +9,12 @@ Anything GCP related pertains here. Feel free to drop me a PR to add stuff. And 
 
 TODO(ricc): dockerize this to render MD into HTML and have SUPER fast cross link with left/upper navigation. Doing it right now.
 
+## Hugo
+
+This website has also a self-service Hugo website which autoupdates when I change some files :)
+
+* Published to: https://gcp-cheatsheets.netlify.app/
+
 ## Naming Conventions
 
 * Filename should follow the name of the command line you're going to use (`kubectl`, `docker` , ...).

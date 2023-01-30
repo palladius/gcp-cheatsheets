@@ -5,12 +5,13 @@ This isn interesting pseudo-circular dependency.
 
 For a list of projects created on or after 15 January 2018, sorted from oldest to newest, presented as a table with project number, project id and creation time columns with dates and times in local timezone:
 
-   gcloud projects list --format="table(projectNumber,projectId,createTime.date(tz=LOCAL))" \
+    gcloud projects list --format="table(projectNumber,projectId,createTime.date(tz=LOCAL))" \
        --filter="createTime>=2018-01-15T12:00:00" --sort-by=createTime
 
 
 To get a list of fields, IO like to first get a JSON file to see the rich schema/proto of what comes out. For instance, I can see
 
+```
     $ gcloud projects list --format=json # produces something like this
     {
       "createTime": "2013-03-20T09:23:43.062Z",
@@ -23,6 +24,7 @@ To get a list of fields, IO like to first get a JSON file to see the rich schema
       "projectId": "palladius.it:palladiusit",
       "projectNumber": "197664194848"
     },
+```
 
 So let's now capture the parent to see if it's Org or Folder :)
 

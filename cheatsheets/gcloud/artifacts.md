@@ -1,4 +1,7 @@
 <!--
+    Note that in MArkdown the two angular parenthesis seems to have to go at lione start
+    or you get Hugo bug :/
+
     trying to solve this :) https://github.com/palladius/sakura/issues/7
 -->
 
