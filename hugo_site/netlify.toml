@@ -8,7 +8,9 @@ HUGO_ENABLEGITINFO = "true"
 GO_VERSION = "1.17.7"
 
 [context.production]
-command = "npm install && hugo --minify"
+# NPM non va!!! :/
+#command = "npm install && hugo --minify"
+command = "hugo --minify"
 
 [context.production.environment]
 HUGO_ENV = "production"
