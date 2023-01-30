@@ -1,4 +1,6 @@
-<!-- trying to solve this :) https://github.com/palladius/sakura/issues/7 -->
+<!--
+    trying to solve this :) https://github.com/palladius/sakura/issues/7
+-->
 
 * Get all the ARs of type docker:
 
