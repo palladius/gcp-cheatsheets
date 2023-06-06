@@ -46,16 +46,19 @@ Thanks to Roberto, now you can:
 
 Example from https://developers.google.com/android-publisher/authorization: 
 
-```{
+```json
+{
   "access_token" : "ya29.???",
   "token_type" : "Bearer",
   "expires_in" : 3600,
   "refresh_token" : "1/za???"
-}```
+}
+```
 
 Thanks to Roberto and Salman to document this.
 
-```$ gcloud auth print-access-token 
+```bash
+$ gcloud auth print-access-token 
 ya29.<Im not gonna tell you>
 $ gcloud auth print-identity-token 
 xxxxxxxxxxxxxxxxxxxxxxxx # 841 alphanums with some - and _
