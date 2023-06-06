@@ -26,7 +26,20 @@ Some tips on ADC:
 * The ADC credentials are a well kept secret: find them here
   `cat ~/.config/gcloud/application_default_credentials.json`.
 * ADC doesn't play well with `$ gcloud config configurations XXX`. So if you
-  switch the configuration from A to B, your ADC will stay the same. 😥
+  switch the configuration from A to B, your ADC will stay the same. 😥 See below
+
+### ADC vs Gcloud whoami
+
+```bash
+# ADC whoami:
+alias adcwhoami='curl -s "https://oauth2.googleapis.com/tokeninfo?access_token=$(gcloud auth application-default print-access-token)" | jq -r .email'
+
+# gcloud whoami:
+alias gwhoami='curl -s "https://oauth2.googleapis.com/tokeninfo?access_token=$(gcloud auth print-access-token)" | jq -r .email'
+
+```
+See more in https://github.com/salrashid123/gcloud_alias_adc
+
 
 ## docker
 

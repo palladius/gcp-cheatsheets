@@ -30,3 +30,9 @@ These are much better than mine - come back when you've fagocitated them:
 * `kubectl` cheasheet: https://kubernetes.io/docs/reference/kubectl/cheatsheet/ (which actually inspired me for this repo)
 * `gcloud` cheatsheet: https://cloud.google.com/sdk/docs/cheatsheet
 * Google Cloud colorful keywords: https://github.com/gregsramblings/google-cloud-4-words (from awesome Priyanka)
+
+## Thanks
+
+Thanks to a number of people who contributed to the Lore hereby contained.
+
+* `[salrashid123](https://github.com/salrashid123)` and `[drebes](https://github.com/drebes)` for [ADC and Auth](https://github.com/salrashid123/gcloud_alias_adc).
